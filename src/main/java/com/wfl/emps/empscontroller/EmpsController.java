@@ -35,7 +35,7 @@ public class EmpsController {
         return "redirect:/emp/getAll";
     }
 
-    @RequestMapping(value = "/emp/delete/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/emp/delete/{id}",method = RequestMethod.DELETE)
     public String del(@PathVariable("id") int id){
         empService.delete(id);
         return "redirect:/emp/getAll";
@@ -48,7 +48,7 @@ public class EmpsController {
         return "updateEmp";
     }
 
-    @RequestMapping(value = "/emp/update",method = RequestMethod.POST)
+    @RequestMapping(value = "/emp/update",method = RequestMethod.PUT)
     public String update(Emps emps){
         empService.update(emps);
         return "redirect:/emp/getAll";
