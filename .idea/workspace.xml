@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a9aebec-a743-4806-b69d-38a619550b35" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wfl/emps/empscontroller/EmpsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wfl/emps/empscontroller/EmpsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/listEmp.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/listEmp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/updateEmp.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/updateEmp.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1589637437939</updated>
       <workItem from="1589637449335" duration="55926000" />
-      <workItem from="1589805629274" duration="6914000" />
+      <workItem from="1589805629274" duration="7475000" />
     </task>
     <servers />
   </component>

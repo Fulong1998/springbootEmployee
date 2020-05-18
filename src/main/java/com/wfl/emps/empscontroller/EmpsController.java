@@ -29,6 +29,7 @@ public class EmpsController {
         return "addEmp";
     }
 
+    //添加页面
     @RequestMapping(value = "/emp/add", method = RequestMethod.POST)
     public String save(Emps emp){
         empService.save(emp);
