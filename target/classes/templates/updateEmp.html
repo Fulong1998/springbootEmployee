@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>员工管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div id="top_content">
+				<header th:include="/common/header.html"></header>
+				<div id="content">
+					<p id="whereami">
+					</p>
+					<h1>
+						修改员工
+					</h1>
+					
+					<form th:action="@{/emp/update}" method="post">
+						<table cellpadding="0" cellspacing="0" border="0"
+							class="form_table">
+<!--							<tr>-->
+<!--								td valign="middle" align="right">-->
+<!--								id:-->
+<!--								</td>-->
+<!--								<td valign="middle" align="left">-->
+<!--									<input type="" class="inputgri"-->
+<!--										   name="id" th:value="${byId.id}"/>-->
+<!--								</td><-->
+<!--							</tr>-->
+							<tr>
+								<td valign="middle" align="right">
+									姓名:
+								</td>
+								<td valign="middle" align="left">
+									<input type="text" class="inputgri" 
+									name="name" th:value="${byId.name}"/>
+								</td>
+							</tr>
+							<tr>
+								<td valign="middle" align="right">
+									年龄:
+								</td>
+								<td valign="middle" align="left">
+									<input type="text" class="inputgri" 
+									name="age" th:value="${byId.age}"/>
+								</td>
+							</tr>
+							<tr>
+								<td valign="middle" align="right">
+									性别:
+								</td>
+								<td valign="middle" align="left">
+									<input type="text" class="inputgri"
+									 name="sex" th:value="${byId.sex}"/>
+								</td>
+							</tr>
+							<tr>
+								<td valign="middle" align="right">
+									薪水:
+								</td>
+								<td valign="middle" align="left">
+									<input type="text" class="inputgri"
+										   name="salary" th:value="${byId.salary}"/>
+								</td>
+							</tr>
+						</table>
+						<input type="hidden" name="id" 
+							th:value="${byId.id}"/>
+						<p>
+							<input type="submit" class="button" 
+							value="确定" />
+						</p>
+					</form>
+				</div>
+			</div>
+			<footer th:include="/common/footer.html"></footer>
+		</div>
+	</body>
+</html>

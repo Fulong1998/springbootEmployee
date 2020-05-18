@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>员工管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="top_content">
+				<header th:include="/common/header.html"></header>
+				<div id="content">
+					<p id="whereami">
+					</p>
+					<h1>
+						员工列表
+					</h1>
+					<table class="table">
+						<tr class="table_header">
+							<td>ID</td>
+							<td>姓名</td>
+							<td>年龄</td>
+							<td>性别</td>
+							<td>薪水</td>
+							<td>操作</td>
+						</tr>
+
+						<tr th:each="list : ${all}">
+							<td th:text="${list.getId()}">ID</td>
+							<td th:text="${list.getName()}">姓名</td>
+							<td th:text="${list.getAge()}">年龄</td>
+							<td th:text="${list.getSex()}">性别</td>
+							<td th:text="${list.getSalary()}">薪水</td>
+							<td>
+								<a th:href="@{/emp/delete/}+${list.id}" onclick="return confirm('确定要删除吗?')" >删除</a>&nbsp;
+								<a th:href="@{/emp/update/}+${list.id}">修改</a>
+							</td>
+						</tr>
+					</table>
+					<p>
+						<input type="button" class="button" value="添加员工"
+						onclick="location='/emp/addPage'"/>
+					</p>
+				</div>
+			</div>
+			<footer th:include="/common/footer.html"></footer>
+		</div>
+	</body>
+</html>

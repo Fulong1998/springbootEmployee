@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wfl.emps.empdao.EmpsDao">
+    <select id="findAll" resultType="Emps">
+        select id,name,age,sex,salary from emps;
+    </select>
+    <select id="findById" parameterType="Integer" resultType="Emps">
+        select id,name,age,sex,salary from emps where id=#{id};
+    </select>
+    <insert id="save" parameterType="Emps">
+        insert into emps (name,age,sex,salary) values (#{name},#{age},#{sex},#{salary});
+    </insert>
+    <delete id="delete" parameterType="Integer">
+        delete from emps where id=#{id};
+    </delete>
+    <update id="update" parameterType="Emps">
+        update emps set name=#{name},age=#{age},sex=#{sex},salary=#{salary} where id=#{id}
+    </update>
+</mapper>
